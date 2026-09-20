@@ -2,7 +2,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --color-primary: #1d4ed8;   /* change these to your own brand colours */
+  --color-primary: #1d4ed8; 
   --color-dark: #0f172a;
   --color-light: #f8fafc;
   --color-text: #334155;
@@ -21,10 +21,7 @@ body {
   padding: 0 1.25rem;
 }
 
-/* ===== 2. HEADER =====
-   TODO: use Flexbox on .nav-wrap so the logo is on the left
-   and the nav links are on the right, vertically centred.
-   Hint: display:flex; justify-content: space-between; align-items: center; */
+/* ===== 2. HEADER ===== */
    .nav-wrap{
     display:flex;
     justify-content:space-between;
@@ -38,9 +35,8 @@ body {
 .nav-links { list-style: none; display:flex; gap:1.5rem; }
 .nav-links a { color: white; text-decoration: none; }
 
-/* ===== 3. HERO =====
-   TODO: give it padding, centre the text, make the h1 big (clamp() is nice:
-   font-size: clamp(2rem, 5vw, 3.5rem);) */
+/* ===== 3. HERO ===== */
+   
 .hero { 
   padding:5rem 0;
   text-align:center;
@@ -65,7 +61,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   transition:background 0.2s;
-  /* TODO: add a hover state (darker background + transition) */
+  
 }
 .btn:hover{
   background:#1e40af;
@@ -76,9 +72,8 @@ body {
 .section--alt { background: var(--color-light); }
 h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-dark); }
 
-/* ===== 6. CARDS =====
-   TODO: make .cards a grid: 3 columns on desktop, 1 on mobile.
-   Hint: grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; */
+/* ===== 6. CARDS =====  */ 
+   
 .cards {
   display:grid;
   grid-template-columns:repeat(autofit,minmax(250px,1fr));
@@ -91,8 +86,7 @@ h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-dark); }
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-/* ===== 7. FORM =====
-   TODO: stack inputs vertically, full width, decent padding, visible focus state */
+/* ===== 7. FORM =====  */
 .contact-form {
   display:flex;
   flex-direction:column;
@@ -124,8 +118,7 @@ h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-dark); }
   text-align: center;
 }
 
-/* ===== 9. MOBILE =====
-   TODO: below 640px, stack the nav under the logo (or hide links – Week 3 adds a burger) */
+/* ===== 9. MOBILE =====  */
 @media (max-width: 640px) {
   .hero{padding:3rem 0;}
 
