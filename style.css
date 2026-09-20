@@ -1,0 +1,132 @@
+/* ===== 1. RESET + VARIABLES ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --color-primary: #1d4ed8;   /* change these to your own brand colours */
+  --color-dark: #0f172a;
+  --color-light: #f8fafc;
+  --color-text: #334155;
+  --max-width: 1100px;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ===== 2. HEADER =====
+   TODO: use Flexbox on .nav-wrap so the logo is on the left
+   and the nav links are on the right, vertically centred.
+   Hint: display:flex; justify-content: space-between; align-items: center; */
+   .nav-wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+   }
+.site-header {
+  background: var(--color-dark);
+  padding: 1rem 0;
+}
+.logo { color: white; font-weight: 700; text-decoration: none; font-size: 1.25rem; }
+.nav-links { list-style: none; display:flex; gap:1.5rem; }
+.nav-links a { color: white; text-decoration: none; }
+
+/* ===== 3. HERO =====
+   TODO: give it padding, centre the text, make the h1 big (clamp() is nice:
+   font-size: clamp(2rem, 5vw, 3.5rem);) */
+.hero { 
+  padding:5rem 0;
+  text-align:center;
+}
+.hero h1{
+  font-size: clamp(2rem,5vw,3.5rem);
+  color:var(--color-dark);
+  margin-bottom:1rem;
+}
+.lead {
+  font-size:1.25rem;
+  margin-bottom:2rem;
+ }
+
+/* ===== 4. BUTTON ===== */
+.btn {
+  display: inline-block;
+  background: var(--color-primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition:background 0.2s;
+  /* TODO: add a hover state (darker background + transition) */
+}
+.btn:hover{
+  background:#1e40af;
+}
+
+/* ===== 5. SECTIONS ===== */
+.section { padding: 4rem 0; }
+.section--alt { background: var(--color-light); }
+h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-dark); }
+
+/* ===== 6. CARDS =====
+   TODO: make .cards a grid: 3 columns on desktop, 1 on mobile.
+   Hint: grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; */
+.cards {
+  display:grid;
+  grid-template-columns:repeat(autofit,minmax(250px,1fr));
+  gap:1.5rem;
+ }
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* ===== 7. FORM =====
+   TODO: stack inputs vertically, full width, decent padding, visible focus state */
+.contact-form {
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+  max-width:500px;
+ }
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius:6px;
+  font:inherit;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid var(--color-primary);
+  border-color: var(--color-primary);
+}
+.contact-form label {
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+/* ===== 8. FOOTER ===== */
+.site-footer {
+  background: var(--color-dark);
+  color: #94a3b8;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+/* ===== 9. MOBILE =====
+   TODO: below 640px, stack the nav under the logo (or hide links – Week 3 adds a burger) */
+@media (max-width: 640px) {
+  .hero{padding:3rem 0;}
+
+}

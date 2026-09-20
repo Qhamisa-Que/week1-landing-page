@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Web Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====== HEADER / NAV ====== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#" class="logo">YourName.dev</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero">
+    <div class="container">
+      <h1>I build fast, modern websites for small businesses.</h1>
+      <p class="lead">Clean design, mobile-friendly, and ready to bring you customers.</p>
+      <a href="#contact" class="btn">Get a free quote</a>
+    </div>
+  </section>
+
+  <!-- ====== ABOUT ====== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About me</h2>
+      <p>
+        "I'm a web developer based in Mthatha. I build clean, fast websites that help small businesses look professional and get more customers online."
+        <!-- TODO: 2–3 sentences about you. Keep it client-focused: -->
+        <!-- what you do for THEM, not your life story. -->
+      </p>
+    </div>
+  </section>
+
+  <!-- ====== SERVICES ====== -->
+  <section id="services" class="section section--alt">
+    <div class="container">
+      <h2>Services</h2>
+      <div class="cards">
+        <!-- TODO: make these 3 cards sit side-by-side on desktop (Flexbox or Grid) -->
+        <!-- and stack on mobile. -->
+        <article class="card">
+          <h3>Landing pages</h3>
+          <p>A single, focused page that turns visitors into enquiries.</p>
+        </article>
+        <article class="card">
+          <h3>Business websites</h3>
+          <p>Multi-page sites for salons, guesthouses, contractors and more.</p>
+        </article>
+        <article class="card">
+          <h3>Website fixes</h3>
+          <p>Broken layout? Slow site? I'll sort it out.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT ====== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <!-- TODO: build a form with: name, email, message textarea, submit button. -->
+      <!-- Use <label> for every input. Style it in style.css. -->
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="post">
+      <input type="hidden" name="access_key" value="1e37723a-276d-48af-a719-84fb17f52a15">
+<label for="name">Name</label>
+<input type="text" id="name" name="name" required>
+
+<label for="email">Email</label>
+<input type="email" id="email" name="email" required>
+
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="5" required></textarea>
+
+<button type="submit" class="btn">Send message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Sir Qhamisa Mnamatha the 1st. Mthatha, South Africa.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
