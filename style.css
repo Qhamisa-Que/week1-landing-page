@@ -28,13 +28,14 @@ body {
     align-items:center;
    }
 .site-header {
-  background: var(--color-dark);
+  background: white;box-shadow:0 1px 3px rgba(0,0,0,0.1);
   padding: 1rem 0;
 }
 .logo { color: white; font-weight: 700; text-decoration: none; font-size: 1.25rem; }
 .logo img { height: 44px; display: block; }
 .nav-links { list-style: none; display:flex; gap:1.5rem; }
-.nav-links a { color: white; text-decoration: none; }
+.nav-links a { color:var(--color-dark); text-decoration: none; }
+.nav-links a:hover { color: var(--color-primary); }
 
 /* ===== 3. HERO ===== */
    
