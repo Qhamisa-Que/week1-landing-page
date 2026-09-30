@@ -186,7 +186,7 @@ html { scroll-behavior: smooth; }
 }
 .wa-float {
   position: fixed;
-  right: 1.25rem;
+  left: 1.25rem;
   bottom: 1.25rem;
   z-index: 100;
   display: inline-flex;
