@@ -124,14 +124,24 @@
       
       <form class="contact-form" action="https://api.web3forms.com/submit" method="post">
       <input type="hidden" name="access_key" value="1e37723a-276d-48af-a719-84fb17f52a15">
+<input type="hidden" name="subject" value="New website enquiry - Rhadebe Digital">
+<p class="form-note">All fields are required. Tell me a little about your business and the website you need.</p>
+
 <label for="name">Name</label>
-<input type="text" id="name" name="name" required>
+<input type="text" id="name" name="name" autocomplete="name"
+       minlength="2" maxlength="80" aria-describedby="name-error" required>
+<p id="name-error" class="field-error" aria-live="polite"></p>
 
 <label for="email">Email</label>
-<input type="email" id="email" name="email" required>
+<input type="email" id="email" name="email" autocomplete="email"
+       maxlength="254" aria-describedby="email-error" required>
+<p id="email-error" class="field-error" aria-live="polite"></p>
 
 <label for="message">Message</label>
-<textarea id="message" name="message" rows="5" required></textarea>
+<textarea id="message" name="message" rows="5" minlength="10" maxlength="2000"
+          aria-describedby="message-hint message-error" required></textarea>
+<p id="message-hint" class="form-hint">At least 10 characters; maximum 2,000.</p>
+<p id="message-error" class="field-error" aria-live="polite"></p>
 
 <button type="submit" class="btn">Send message</button>
       </form>
