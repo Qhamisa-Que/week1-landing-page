@@ -346,3 +346,36 @@ html { scroll-behavior: smooth; }
     gap: 1.25rem;
   }
 }
+
+/* ===== FINAL ACCESSIBILITY POLISH ===== */
+.wa-float {
+  background: #166534;
+}
+
+.wa-float:hover {
+  background: #14532d;
+}
+
+@media (max-width: 640px) {
+  .site-footer {
+    padding-bottom: 6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .card, .btn, .wa-float, .nav-links a::after {
+    transition: none;
+  }
+
+  .card:hover, .btn:hover, .wa-float:hover {
+    transform: none;
+  }
+}
