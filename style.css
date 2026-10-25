@@ -975,3 +975,23 @@ h3 { color: var(--color-dark); }
   border-color: var(--color-violet);
   box-shadow: 0 18px 40px -24px rgba(139, 92, 246, .6);
 }
+
+/* ===== CARE PLAN BORDERS ===== */
+.card.card--care {
+  border-color: var(--color-primary);
+  box-shadow: 0 18px 40px -24px rgba(29, 78, 216, .6);
+}
+.card.card--care-plus {
+  border-color: var(--color-violet);
+  box-shadow: 0 18px 40px -24px rgba(139, 92, 246, .6);
+}
+
+/* ===== CARE PLAN BORDERS ===== */
+.card.card--care {
+  border-color: var(--color-primary);
+  box-shadow: 0 18px 40px -24px rgba(29, 78, 216, .6);
+}
+.card.card--care-plus {
+  border-color: var(--color-violet);
+  box-shadow: 0 18px 40px -24px rgba(139, 92, 246, .6);
+}
