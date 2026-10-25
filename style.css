@@ -964,3 +964,14 @@ h3 { color: var(--color-dark); }
   .faq__icon::before, .faq__icon::after { transition: none; }
   .faq__answer { animation: none; }
 }
+
+/* ===== CARE PLANS ===== */
+@media (min-width: 1080px) {
+  #services .cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.card--care-plus {
+  border-color: var(--color-violet);
+  box-shadow: 0 18px 40px -24px rgba(139, 92, 246, .6);
+}
