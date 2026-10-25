@@ -64,16 +64,35 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__bar"></span></div>
+
+  <div class="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+  </div>
+
   <!-- ====== HEADER / NAV ====== -->
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="container nav-wrap">
-     <a href="#" class="logo"><img src="images/logo.webp" alt="Rhadebe Digital" width="300" height="99"></a>    <nav>
+      <a href="#" class="logo">
+        <img src="images/logo.webp" alt="Rhadebe Digital" width="300" height="99">
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="nav" aria-label="Main">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#how">How it works</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -82,169 +101,293 @@
   <main id="main-content">
 
   <!-- ====== HERO ====== -->
-  <section class="hero">
-    <div class="container">
-<h1>Websites that make your business the clear choice.</h1>
-<p class="lead">Professional, mobile-friendly websites that showcase your services, build confidence and make it easy for customers to get in touch.</p>
-<a href="#contact" class="btn">Get a free quote</a>
-<a href="#work" class="btn btn--outline">See our work</a>
+  <section class="hero" id="hero">
+    <canvas class="hero__canvas" aria-hidden="true"></canvas>
+    <div class="hero__glow" aria-hidden="true"></div>
+
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> Mthatha · Eastern Cape</p>
+
+        <h1 class="hero__title" data-split>Websites that make your business the clear choice.</h1>
+
+        <p class="lead">Professional, mobile-friendly websites that showcase your services, build confidence and make it easy for customers to get in touch.</p>
+
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary" data-magnetic>Get a free quote</a>
+          <a href="#work" class="btn btn--ghost" data-magnetic>See our work</a>
+        </div>
+
+        <ul class="hero__stats">
+          <li><strong>Mobile-first</strong><span>Built for phones first</span></li>
+          <li><strong>7–10 days</strong><span>From first chat to launch</span></li>
+          <li><strong>Direct line</strong><span>You deal with me, not an agency</span></li>
+        </ul>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="phone" data-tilt>
+          <div class="phone__frame">
+            <div class="phone__notch"></div>
+            <img src="images/ekhaya-mobile.webp" alt="" width="390" height="640" decoding="async">
+          </div>
+        </div>
+        <span class="float-chip float-chip--one">Mobile friendly</span>
+        <span class="float-chip float-chip--two">Fast loading</span>
+        <span class="float-chip float-chip--three">Easy to update</span>
+      </div>
     </div>
   </section>
 
+  <!-- ====== MARQUEE ====== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Web design</span><span aria-hidden="true">✳</span>
+      <span>Landing pages</span><span aria-hidden="true">✳</span>
+      <span>Business websites</span><span aria-hidden="true">✳</span>
+      <span>Website fixes</span><span aria-hidden="true">✳</span>
+      <span>Hosting &amp; domains</span><span aria-hidden="true">✳</span>
+      <span>Mthatha &amp; beyond</span><span aria-hidden="true">✳</span>
+      <span>Web design</span><span aria-hidden="true">✳</span>
+      <span>Landing pages</span><span aria-hidden="true">✳</span>
+      <span>Business websites</span><span aria-hidden="true">✳</span>
+      <span>Website fixes</span><span aria-hidden="true">✳</span>
+      <span>Hosting &amp; domains</span><span aria-hidden="true">✳</span>
+      <span>Mthatha &amp; beyond</span><span aria-hidden="true">✳</span>
+    </div>
+  </div>
+
   <!-- ====== ABOUT ====== -->
   <section id="about" class="section">
-  <div class="container">
-    <h2>About Rhadebe Digital</h2>
-    <p>Rhadebe Digital is a web design studio in Mthatha, Eastern Cape, founded by Qhamisa Mnamatha. I build clear, mobile-friendly websites that help small businesses look professional, showcase their services and make it easy for customers to get in touch. Whether you need a one-page website, a multi-page business site or improvements to an existing website, you deal directly with me. I keep the process straightforward, with a focus on what your business needs.</p>
-  </div>
-</section>
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <p class="section-label">About</p>
+          <h2>About Rhadebe Digital</h2>
+          <p>Rhadebe Digital is a web design studio in Mthatha, Eastern Cape, founded by Qhamisa Mnamatha. I build clear, mobile-friendly websites that help small businesses look professional, showcase their services and make it easy for customers to get in touch. Whether you need a one-page website, a multi-page business site or improvements to an existing website, you deal directly with me. I keep the process straightforward, with a focus on what your business needs.</p>
+        </div>
+        <div class="founder-card" data-tilt>
+          <span class="founder-card__initials" aria-hidden="true">QM</span>
+          <p class="founder-card__name">Qhamisa Mnamatha</p>
+          <p class="founder-card__role">Founder &amp; Web Designer</p>
+          <p class="founder-card__meta">Mthatha, Eastern Cape</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ====== SERVICES ====== -->
   <section id="services" class="section section--alt">
     <div class="container">
-      <h2>Services</h2>
+      <p class="section-label">Services</p>
+      <h2>What I build</h2>
       <div class="cards">
-      
-<article class="card">
-  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
-  <h3>Landing pages</h3>
-  <p>A single, focused page that turns visitors into enquiries.</p>
-  <p class="price">from R2,000</p>
-</article>
-<article class="card">
-  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 20h8"/></svg>
-  <h3>Business websites</h3>
-  <p>Multi-page sites for salons, guesthouses, contractors and more.</p>
-  <p class="price">from R4,800</p>
-</article>
-<article class="card">
-  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
-  <h3>Website fixes</h3>
-  <p>Broken layout? Slow site? I'll sort it out.</p>
-  <p class="price">from R1,200</p>
-</article>
+
+        <article class="card" data-tilt>
+          <span class="card__glow" aria-hidden="true"></span>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+          <h3>Landing pages</h3>
+          <p>A single, focused page that turns visitors into enquiries.</p>
+          <p class="price">from R2,000</p>
+        </article>
+
+        <article class="card" data-tilt>
+          <span class="card__glow" aria-hidden="true"></span>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 20h8"/></svg>
+          <h3>Business websites</h3>
+          <p>Multi-page sites for salons, guesthouses, contractors and more.</p>
+          <p class="price">from R4,800</p>
+        </article>
+
+        <article class="card" data-tilt>
+          <span class="card__glow" aria-hidden="true"></span>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+          <h3>Website fixes</h3>
+          <p>Broken layout? Slow site? I'll sort it out.</p>
+          <p class="price">from R1,200</p>
+        </article>
+
       </div>
     </div>
   </section>
+
+  <!-- ====== WORK ====== -->
   <section id="work" class="section">
-  <div class="container">
-    <h2>Recent work</h2>
-    <div class="cards">
-      <article class="card work-card">
-        <a class="work-preview" href="https://ekhayaguesthouse.netlify.app"
-           target="_blank" rel="noopener"
-           aria-label="Open the Ekhaya Guesthouse concept website">
-          <img src="ekhaya-preview.webp"
-               alt="Homepage of the Ekhaya Guesthouse concept website"
-               width="1200" height="700" loading="lazy" decoding="async">
-        </a>
+    <div class="container">
+      <p class="section-label">Recent work</p>
+      <h2>Sites I've built</h2>
+      <div class="cards">
+        <article class="card work-card">
+          <a class="work-preview" href="https://ekhayaguesthouse.netlify.app"
+             target="_blank" rel="noopener"
+             aria-label="Open the Ekhaya Guesthouse concept website">
+            <img src="ekhaya-preview.webp"
+                 alt="Homepage of the Ekhaya Guesthouse concept website"
+                 width="1200" height="700" loading="lazy" decoding="async">
+            <span class="work-preview__overlay" aria-hidden="true">View demo site</span>
+          </a>
 
-        <div class="work-card__body">
-          <p class="work-label">Concept project · Mthatha</p>
-          <h3>Ekhaya Guesthouse</h3>
-          <p>A mobile-friendly guesthouse website concept with room cards, a photo lightbox, FAQs and a working booking enquiry form.</p>
-          <a href="https://ekhayaguesthouse.netlify.app"
-             target="_blank" rel="noopener" class="btn">View demo site</a>
-        </div>
-      </article>
+          <div class="work-card__body">
+            <p class="work-label">Concept project · Mthatha</p>
+            <h3>Ekhaya Guesthouse</h3>
+            <p>A mobile-friendly guesthouse website concept with room cards, a photo lightbox, FAQs and a working booking enquiry form.</p>
+            <a href="https://ekhayaguesthouse.netlify.app"
+               target="_blank" rel="noopener" class="btn btn--primary">View demo site</a>
+          </div>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="how" class="section section--alt">
-  <div class="container">
-    <h2>How it works</h2>
-    <div class="cards">
-      <article class="card">
-        <span class="step">1</span>
-        <h3>We chat</h3>
-        <p>Send a WhatsApp or fill in the form. We talk about your business, what you need and what it costs. No charge, no pressure.</p>
-      </article>
-      <article class="card">
-        <span class="step">2</span>
-        <h3>We build</h3>
-        <p>You get your website in 7 to 10 days. You see it before it goes live and we change anything you are not happy with.</p>
-      </article>
-      <article class="card">
-        <span class="step">3</span>
-        <h3>You go live</h3>
-        <p>Your site goes online with your own domain name, and small fixes are free for the first 30 days.</p>
-      </article>
+  <!-- ====== HOW IT WORKS ====== -->
+  <section id="how" class="section section--alt">
+    <div class="container">
+      <p class="section-label">How it works</p>
+      <h2>Three simple steps</h2>
+      <div class="cards steps">
+
+        <article class="card" data-tilt>
+          <span class="step">1</span>
+          <h3>We chat</h3>
+          <p>Send a WhatsApp or fill in the form. We talk about your business, what you need and what it costs. No charge, no pressure.</p>
+        </article>
+
+        <article class="card" data-tilt>
+          <span class="step">2</span>
+          <h3>We build</h3>
+          <p>You get your website in 7 to 10 days. You see it before it goes live and we change anything you are not happy with.</p>
+        </article>
+
+        <article class="card" data-tilt>
+          <span class="step">3</span>
+          <h3>You go live</h3>
+          <p>Your site goes online with your own domain name, and small fixes are free for the first 30 days.</p>
+        </article>
+
+      </div>
     </div>
-  </div>
-</section>  
-<!-- ====== CONTACT ====== -->
+  </section>
+
+  <!-- ====== CONTACT ====== -->
   <section id="contact" class="section">
     <div class="container">
-      <h2>Contact</h2>
-      
-      <form class="contact-form" action="https://api.web3forms.com/submit" method="post">
-      <input type="hidden" name="access_key" value="1e37723a-276d-48af-a719-84fb17f52a15">
-<input type="hidden" name="subject" value="New website enquiry - Rhadebe Digital">
-<p class="form-note">All fields are required. Tell me a little about your business and the website you need.</p>
+      <div class="contact-grid">
+        <div class="contact-intro">
+          <p class="section-label">Contact</p>
+          <h2>Let's talk about your website</h2>
+          <p>Tell me a little about your business and what you need. I'll come back to you with a clear plan and a price.</p>
 
-<label for="name">Name</label>
-<input type="text" id="name" name="name" autocomplete="name"
-       minlength="2" maxlength="80" aria-describedby="name-error" required>
-<p id="name-error" class="field-error" aria-live="polite"></p>
+          <a class="btn btn--whatsapp"
+             href="https://wa.me/27695545501?text=Hi%20Qhamisa%2C%20I%20saw%20Rhadebe%20Digital%20and%20I%27d%20like%20to%20ask%20about%20a%20website%20for%20my%20business."
+             target="_blank" rel="noopener" data-magnetic>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.9-.9L3 20l1.3-3.9A8.4 8.4 0 0 1 3 11.5a8.4 8.4 0 0 1 9-8.4 8.4 8.4 0 0 1 9 8.4z"/>
+            </svg>
+            WhatsApp 069 554 5501
+          </a>
 
-<label for="email">Email</label>
-<input type="email" id="email" name="email" autocomplete="email"
-       maxlength="254" aria-describedby="email-error" required>
-<p id="email-error" class="field-error" aria-live="polite"></p>
+          <p class="contact-meta">Mthatha, Eastern Cape · Replies within the day</p>
+        </div>
 
-<label for="message">Message</label>
-<textarea id="message" name="message" rows="5" minlength="10" maxlength="2000"
-          aria-describedby="message-hint message-error" required></textarea>
-<p id="message-hint" class="form-hint">At least 10 characters; maximum 2,000.</p>
-<p id="message-error" class="field-error" aria-live="polite"></p>
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="post">
+          <input type="hidden" name="access_key" value="1e37723a-276d-48af-a719-84fb17f52a15">
+          <input type="hidden" name="subject" value="New website enquiry - Rhadebe Digital">
+          <p class="form-note">All fields are required. Tell me a little about your business and the website you need.</p>
 
-<button type="submit" class="btn">Send message</button>
-      </form>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name"
+                 minlength="2" maxlength="80" aria-describedby="name-error" required>
+          <p id="name-error" class="field-error" aria-live="polite"></p>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email"
+                 maxlength="254" aria-describedby="email-error" required>
+          <p id="email-error" class="field-error" aria-live="polite"></p>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" minlength="10" maxlength="2000"
+                    aria-describedby="message-hint message-error" required></textarea>
+          <p id="message-hint" class="form-hint">At least 10 characters; maximum 2,000.</p>
+          <p id="message-error" class="field-error" aria-live="polite"></p>
+
+          <button type="submit" class="btn btn--primary" data-magnetic>Send message</button>
+        </form>
+      </div>
     </div>
   </section>
 
   </main>
-  
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-  <div>
-    <h3>Rhadebe Digital</h3>
-    <p>Websites for small businesses in Mthatha and across South Africa.</p>
-  </div>
-  <div>
-    <h3>Pages</h3>
-    <ul class="footer-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#how">How it works</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-  <div>
-    <h3>Get in touch</h3>
-    <ul class="footer-links">
-      <li><a href="https://wa.me/27695545501">WhatsApp 069 554 5501</a></li>
-      <li><a href="tel:+27695545501">Call 069 554 5501</a></li>
-      <li>Mthatha, Eastern Cape</li>
-    </ul>
-  </div>
-</div>
-<p class="copy">&copy; 2026 Rhadebe Digital · Qhamisa Mnamatha · Mthatha, South Africa.</p>
+        <div>
+          <h3>Rhadebe Digital</h3>
+          <p>Websites for small businesses in Mthatha and across South Africa.</p>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Get in touch</h3>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/27695545501">WhatsApp 069 554 5501</a></li>
+            <li><a href="tel:+27695545501">Call 069 554 5501</a></li>
+            <li>Mthatha, Eastern Cape</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SOCIAL LINKS GO HERE (added once the Rhadebe accounts exist)
+      <ul class="social-links">
+        <li><a href="FACEBOOK-URL" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="INSTAGRAM-URL" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/qhamisa-mnamatha-a24b19278" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+      -->
+
+      <p class="copy">&copy; 2026 Rhadebe Digital · Qhamisa Mnamatha · Mthatha, South Africa.</p>
     </div>
   </footer>
-<aside aria-label="WhatsApp contact">
-  <a class="wa-float" href="https://wa.me/27695545501" target="_blank"
-     rel="noopener" aria-label="WhatsApp us at Rhadebe Digital">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-      <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.9-.9L3 20l1.3-3.9A8.4 8.4 0 0 1 3 11.5a8.4 8.4 0 0 1 9-8.4 8.4 8.4 0 0 1 9 8.4z"/>
-    </svg>
-    <span>WhatsApp us</span>
-  </a>
-</aside>
+
+  <!-- ====== FLOATING CONTACT BUTTON ====== -->
+  <aside class="fab" aria-label="Quick contact">
+    <ul class="fab__menu" id="fab-menu" hidden>
+      <li>
+        <a href="https://wa.me/27695545501?text=Hi%20Qhamisa%2C%20I%20saw%20Rhadebe%20Digital%20and%20I%27d%20like%20to%20ask%20about%20a%20website%20for%20my%20business." target="_blank" rel="noopener">
+          <span class="fab__label">WhatsApp</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.9-.9L3 20l1.3-3.9A8.4 8.4 0 0 1 3 11.5a8.4 8.4 0 0 1 9-8.4 8.4 8.4 0 0 1 9 8.4z"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="tel:+27695545501">
+          <span class="fab__label">Call</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <button class="fab__toggle" type="button" aria-expanded="false" aria-controls="fab-menu" aria-label="Contact options">
+      <svg class="fab__icon fab__icon--open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </svg>
+      <svg class="fab__icon fab__icon--close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path d="M18 6 6 18M6 6l12 12"/>
+      </svg>
+    </button>
+  </aside>
+
   <script src="script.js"></script>
 </body>
 </html>
